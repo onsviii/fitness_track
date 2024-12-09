@@ -1,48 +1,8 @@
 import React, { useState } from "react";
+import SignIn from "../components/SignIn";
+import SignUp from "../components/SignUp";
 
-const SignUp = () => {
-  return (
-    <div className="auth-container">
-      <h2>Реєстрація</h2>
-      <form>
-        <div className="form-group">
-          <label htmlFor="username">Ім'я користувача</label>
-          <input type="text" id="username" placeholder="Введіть ім'я" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Електронна пошта</label>
-          <input type="email" id="email" placeholder="example@mail.com" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Пароль</label>
-          <input type="password" id="password" placeholder="Введіть пароль" />
-        </div>
-        <button type="submit" className="btn">Зареєструватися</button>
-      </form>
-    </div>
-  );
-};
-
-const SignIn = () => {
-  return (
-    <div className="auth-container">
-      <h2>Вхід</h2>
-      <form>
-        <div className="form-group">
-          <label htmlFor="email">Електронна пошта</label>
-          <input type="email" id="email" placeholder="example@mail.com" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Пароль</label>
-          <input type="password" id="password" placeholder="Введіть пароль" />
-        </div>
-        <button type="submit" className="btn">Увійти</button>
-      </form>
-    </div>
-  );
-};
-
-const Auth = () => {
+const Authentication = () => {
   const [isSignUp, setIsSignUp] = useState(true);
 
   return (
@@ -58,4 +18,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Authentication;
