@@ -8,8 +8,8 @@ import {
 import Footer from "./components/Footer"
 import NaviBar from './components/NaviBar';
 
-import { Home } from './Home';
-import { Users } from './Users';
+import Home from './Home';
+import Users from './Users';
 import Auth from "./AuthPage";
 
 function App() {
