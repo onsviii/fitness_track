@@ -15,16 +15,16 @@ import Auth from "./AuthPage";
 function App() {
   return (
     <>
-    <Router>
-      <div className="wrapper">
-        <NaviBar />
-        <Footer />
-      </div>
-      <Routes>
-        <Route exact path="/home" element={Home} />
-        <Route path="/profile" element={Users} />
-      </Routes>
-    </Router>
+      <Router>
+        <div className="wrapper">
+          <NaviBar />
+          <Routes>
+          <Route path="/home" Component={Home} />
+          <Route path="/profile" Component={Users} />
+        </Routes>
+          <Footer />
+        </div>
+      </Router>
     </>
   );
 }
