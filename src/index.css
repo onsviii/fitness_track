@@ -6,16 +6,19 @@
 }
 
 body {
-  background: url('./img/background.jpg') no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background: linear-gradient(135deg, #222, #ff7300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-attachment: fixed;
+  /*background: url('./img/background.jpg') no-repeat;
+  background-size: cover;*/
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
 .wrapper {
-  max-width: 1000px;
+  width: 1300px;
   margin: 40px auto;
   padding: 20px;
   background: rgba(255, 255, 255, 0.9);
@@ -32,4 +35,73 @@ footer {
   margin: 100px;
   font-size: 1.0rem;
   text-align: center;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.auth-container {
+  margin-bottom: 20px;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #ff7300;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #ff7300;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #e56600;
+}
+
+.switch-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background: transparent;
+  color: #ff7300;
+  border: 2px solid #ff7300;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.switch-btn:hover {
+  background: #ff7300;
+  color: #fff;
 }
