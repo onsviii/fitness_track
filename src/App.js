@@ -1,6 +1,10 @@
+import Footer from "./components/Footer"
+
 function App() {
   return (
-    <div>Чукча</div>
+    <div className="wrapper">
+        <Footer />
+    </div>
   );
 }
 
