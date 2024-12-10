@@ -8,21 +8,22 @@
 
 body {
   background: linear-gradient(135deg, #222, #ff7300);
-  display: flex;
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   /*background: url('./img/background.jpg') no-repeat;
   background-size: cover;*/
 }
 
 .wrapper {
-  width: 1300px;
+  width: 100%;
   margin: 40px auto;
-  padding: 20px;
+  padding: 40px;
   background: rgba(10, 10, 10, 0.9);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
   overflow: auto;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -32,91 +33,22 @@ header .logo {
 
 }
 
-footer {
-  margin: 50px;
-  font-size: 1.0rem;
-  text-align: center;
-}
 
-footer p {
-  color: rgb(255, 255, 255);
-}
-
-.page-container {
-  width: 100%;
+.home-container {
   max-width: 1000px;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.auth-container {
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.auth-container h2 {
-  margin-bottom: 20px;
-  color: #ff7300;
+.status-item {
+  font-size: 1.1rem;
 }
-
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background: #333;
-  color: #fff;
-}
-
-.btn {
-  width: 100%;
-  padding: 10px;
-  background: #ff7300;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn:hover {
-  background: #e56600;
-}
-
-.switch-btn {
-  margin-top: 20px;
-  padding: 10px;
-  background: transparent;
-  color: #ff7300;
-  border: 2px solid #ff7300;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.switch-btn:hover {
-  background: #ff7300;
-  color: #fff;
-}
-
-.nav-link {
-  color: #bbb !important;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: #ff7300 !important;
-}
-
