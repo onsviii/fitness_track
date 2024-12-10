@@ -1,27 +1,30 @@
 import React, {useState} from "react";
+import './Authentication.css'
 
-const SignIn = () => {
+const SignUp = () => {
+    //const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(false);
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
   
     const validateInputs = () => {
-      if (!email || !password) {
+      if (!name || !email || !password) {
         alert("Please fill in all fields");
         return false;
       }
       return true;
     };
   
-    const handelSignIn = async () => {
+    const handelSignUp = async () => {
       setLoading(true);
       setButtonDisabled(true);
-      /*if (validateInputs()) {
-        await UserSignIn({ email, password })
+      if (validateInputs()) {
+        /*await UserSignUp({ name, email, password })
           .then((res) => {
             dispatch(loginSuccess(res.data));
-            alert("Login Success");
+            alert("Account Created Success");
             setLoading(false);
             setButtonDisabled(false);
           })
@@ -29,26 +32,30 @@ const SignIn = () => {
             alert(err.response.data.message);
             setLoading(false);
             setButtonDisabled(false);
-          });
-      }*/
+          });*/
+      }
     };
 
     return (
       <div className="auth-container">
-        <h2>Вхід</h2>
+        <h2>Реєстрація</h2>
         <form>
           <div className="form-group">
+            <label htmlFor="username">Ім'я користувача</label>
+            <input type="text" id="username" placeholder="Введіть ім'я" />
+          </div>
+          <div className="form-group">
             <label htmlFor="email">Електронна пошта</label>
-            <input type="email" id="email" placeholder="Ввеідть ел. пошту" />
+            <input type="email" id="email" placeholder="Введіть ел. пошту" />
           </div>
           <div className="form-group">
             <label htmlFor="password">Пароль</label>
             <input type="password" id="password" placeholder="Введіть пароль" />
           </div>
-          <button type="submit" className="btn">Увійти</button>
+          <button type="submit" className="btn">Зареєструватися</button>
         </form>
       </div>
     );
   };
 
-  export default SignIn;
+  export default SignUp;
