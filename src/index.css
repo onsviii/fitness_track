@@ -3,7 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,22 +19,27 @@ body {
   background-size: cover;*/
 }
 
-.wrapper {
-  margin: 40px auto;
+/*.page-container {
+  max-width: 600px;
+  width: fit-content;
   padding: 40px;
   background: rgba(10, 10, 10, 0.9);
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-}
+  text-align: center;
+}*/
 
-header .logo {
-
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 .home-container {
-  max-width: 1000px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
 }

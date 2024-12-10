@@ -5,6 +5,7 @@ import {
   Routes
 } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
+import "./index.css"
 
 import Footer from "./components/Footer/Footer"
 import NaviBar from './components/NaviBar/NaviBar';
@@ -20,7 +21,7 @@ function App() {
     <>
       <Router>
         {false ? (
-          <Container className='wrapper'>
+          <Container>
             <NaviBar />
             <Routes>
               <Route path="/" exact Component={Home} />
@@ -29,7 +30,7 @@ function App() {
             <Footer />
           </Container>
         ) : (
-          <Container>
+          <Container className="page-container">
             <Authentication />
           </Container>
         )}

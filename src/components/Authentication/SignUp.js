@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import Container from "react-bootstrap/Container";
+import {Visibility, VisibilityOff } from "@mui/icons-material";
 import './Authentication.css'
 
 const SignUp = () => {
@@ -8,6 +10,7 @@ const SignUp = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
   
     const validateInputs = () => {
       if (!name || !email || !password) {
@@ -41,18 +44,56 @@ const SignUp = () => {
         <h2>Реєстрація</h2>
         <form>
           <div className="form-group">
-            <label htmlFor="username">Ім'я користувача</label>
-            <input type="text" id="username" placeholder="Введіть ім'я" />
+            <label htmlFor="name">Ім'я користувача</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Введіть повне ім'я"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className="form-group">
             <label htmlFor="email">Електронна пошта</label>
-            <input type="email" id="email" placeholder="Введіть ел. пошту" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Введіть ел. пошту"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Пароль</label>
-            <input type="password" id="password" placeholder="Введіть пароль" />
+          <div className="form-group password-group">
+          <label htmlFor="password">Пароль</label>
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              id="password"
+              placeholder="Введіть пароль"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <>
+              {showPassword ? (
+                <>
+                  <Visibility className="visibility"  onClick={() => setShowPassword(false)} />
+                </>
+              ) : (
+                <>
+                  <VisibilityOff className="visibility" onClick={() => setShowPassword(true)} />
+                </>
+              )}
+            </>
           </div>
-          <button type="submit" className="btn">Зареєструватися</button>
+        </div>
+          <button type="submit"
+           className="btn"
+           isLoading={loading}
+           onClick={handelSignUp}
+          >
+            Зареєструватися
+          </button>
         </form>
       </div>
     );
