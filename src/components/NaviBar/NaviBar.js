@@ -7,7 +7,7 @@ import "./NaviBar.css"
 export default function NaviBar() {
   return (
     <>
-      <Navbar className="navbar-container">
+      <Navbar>
         <Container>
           <Navbar.Brand href="/home">Fitness Tracker</Navbar.Brand>
           <Nav className="me-auto">

@@ -1,18 +1,22 @@
-.navbar-container {
+.navbar {
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    background-color: #2e2e2e;
     color: #ffffff
 }
 
-nav
+.navbar-brand {
+    color: #fff !important;
+    font-size: 1.75rem;
+    font-weight: 650;
+}
 
 .nav-link {
-    color: #ffffff !important;
-    text-decoration: none;
+    color: #fff !important;
+    border-radius: 10px;
+    font-size: 1.25rem;
   }
   
 .nav-link:hover {
-color: #ff7300 !important;
+    background: #333;
 }
