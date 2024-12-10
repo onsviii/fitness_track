@@ -10,9 +10,9 @@ import "./index.css"
 import Footer from "./components/Footer/Footer"
 import NaviBar from './components/NaviBar/NaviBar';
 
-import Home from './pages/Home';
-import Users from './pages/Users';
-import Authentication from "./pages/Authentication";
+import Home from './pages/Home/Home';
+import Users from './pages/Users/Users';
+import Authentication from "./pages/Authentication/Authentication";
 
 function App() {
   //const { currentUser } = useSelector((state) => state.user);
@@ -30,7 +30,7 @@ function App() {
             <Footer />
           </Container>
         ) : (
-          <Container className="page-container">
+          <Container>
             <Authentication />
           </Container>
         )}

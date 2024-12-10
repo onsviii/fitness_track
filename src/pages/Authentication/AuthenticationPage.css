@@ -1,0 +1,15 @@
+.page-container {
+    max-width: 600px;
+    padding: 80px;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+  }

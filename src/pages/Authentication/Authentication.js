@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import SignIn from "../components/Authentication/SignIn";
-import SignUp from "../components/Authentication/SignUp";
-import "../components/Authentication/Authentication.css";
+import SignIn from "../../components/Authentication/SignIn";
+import SignUp from "../../components/Authentication/SignUp";
+import "./AuthenticationPage.css";
 
 const Authentication = () => {
   const [isSignUp, setIsSignUp] = useState(true);
 
   return (
-    <Container >
+    <Container className="page-container">
       {isSignUp ? <SignUp /> : <SignIn />}
       <button 
         onClick={() => setIsSignUp(!isSignUp)} 

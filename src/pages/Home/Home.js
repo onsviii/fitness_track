@@ -1,5 +1,5 @@
 import React from "react";
-import CardItem from "../components/CardItem/CardItem";;
+import CardItem from "../../components/CardItem/CardItem";;
 
 export default function Home() {
   return (
