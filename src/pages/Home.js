@@ -16,7 +16,7 @@ export default function Home() {
           ⏱️ Розминка: <strong>0/30 хв</strong>
         </div>
       </div>
-      <div>
+      <div className="card-container">
         <CardItem title="Сон" description="Знайдіть вашу сонну тваринку" />
         <CardItem title="Пульс" description="Одягніть пристрій і виміряйте" />
         <CardItem title="Тиск" description="Одягніть пристрій і виміряйте" />

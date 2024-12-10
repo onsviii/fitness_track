@@ -11,20 +11,16 @@ body {
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
   /*background: url('./img/background.jpg') no-repeat;
   background-size: cover;*/
 }
 
 .wrapper {
-  width: 100%;
   margin: 40px auto;
   padding: 40px;
   background: rgba(10, 10, 10, 0.9);
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-  overflow: auto;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
@@ -51,4 +47,10 @@ header .logo {
 .status-item {
   color: #fff;
   font-size: 1.1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
