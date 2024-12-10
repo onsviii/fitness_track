@@ -9,9 +9,9 @@ export default function NaviBar() {
     <>
       <Navbar>
         <Container>
-          <Navbar.Brand href="/home">Fitness Tracker</Navbar.Brand>
+          <Navbar.Brand href="/">Fitness Tracker</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/home">Здоров'я</Nav.Link>
+            <Nav.Link href="/">Здоров'я</Nav.Link>
             <Nav.Link href="/profile">Профіль</Nav.Link>
           </Nav>
         </Container>

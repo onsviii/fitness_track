@@ -19,11 +19,11 @@ function App() {
   return (
     <>
       <Router>
-        {true ? (
+        {false ? (
           <Container className='wrapper'>
             <NaviBar />
             <Routes>
-              <Route path="/home" Component={Home} />
+              <Route path="/" exact Component={Home} />
               <Route path="/profile" Component={Users} />
             </Routes>
             <Footer />
