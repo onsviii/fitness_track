@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import {Visibility, VisibilityOff } from "@mui/icons-material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { CircularProgress } from '@mui/material';
 import "./Authentication.css";
 
 const SignIn = () => {
@@ -30,7 +31,7 @@ const SignIn = () => {
     <Container>
       <h2>Вхід</h2>
       <form>
-        <div className="form-group">
+        <Container className="form-group">
           <label htmlFor="email">Електронна пошта</label>
           <input
             type="email"
@@ -39,10 +40,10 @@ const SignIn = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
-        <div className="form-group password-group">
+        </Container>
+        <Container className="form-group password-group">
           <label htmlFor="password">Пароль</label>
-          <div className="password-wrapper">
+          <Container className="password-wrapper">
             <input
               type={showPassword ? "text" : "password"}
               id="password"
@@ -62,16 +63,26 @@ const SignIn = () => {
                 </>
               )}
             </>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="btn"
-          disabled={buttonDisabled}
-          onClick={handleSignIn}
-        >
-          Увійти
-        </button>
+          </Container>
+        </Container>
+        <Container className="btn-wrapper">
+          <button
+            type="submit"
+            className="btn"
+            isLoading={loading}
+            isDisabled={buttonDisabled}
+            onClick={handleSignIn}
+          >
+            Увійти
+          </button>
+          <>
+            {loading && (
+              <CircularProgress className="circular-progress signIn-spec"
+                style={{  width: "18px", height: "18px", color: "white"}}
+              />
+            )}
+          </>
+        </Container>
       </form>
     </Container>
   );

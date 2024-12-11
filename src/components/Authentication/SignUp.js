@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Container from "react-bootstrap/Container";
 import {Visibility, VisibilityOff } from "@mui/icons-material";
+import { CircularProgress } from '@mui/material';
 import './Authentication.css'
 
 const SignUp = () => {
@@ -43,7 +44,7 @@ const SignUp = () => {
       <Container>
         <h2>Реєстрація</h2>
         <form>
-          <div className="form-group">
+          <Container className="form-group">
             <label htmlFor="name">Ім'я користувача</label>
             <input
               type="text"
@@ -52,8 +53,8 @@ const SignUp = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-          </div>
-          <div className="form-group">
+          </Container>
+          <Container className="form-group">
             <label htmlFor="email">Електронна пошта</label>
             <input
               type="email"
@@ -62,10 +63,10 @@ const SignUp = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-          <div className="form-group password-group">
+          </Container>
+          <Container className="form-group password-group">
           <label htmlFor="password">Пароль</label>
-          <div className="password-wrapper">
+          <Container className="password-wrapper">
             <input
               type={showPassword ? "text" : "password"}
               id="password"
@@ -85,15 +86,24 @@ const SignUp = () => {
                 </>
               )}
             </>
-          </div>
-        </div>
-          <button type="submit"
-           className="btn"
-           isLoading={loading}
-           onClick={handelSignUp}
-          >
-            Зареєструватися
-          </button>
+          </Container>
+        </Container>
+        <Container className="btn-wrapper">
+            <button type="submit"
+              className="btn"
+              isLoading={loading}
+              onClick={handelSignUp}
+            >
+              Зареєструватися
+            </button>
+            <>
+              {loading && (
+                <CircularProgress className="circular-progress signUp-spec"
+                  style={{  width: "18px", height: "18px", color: "white"}}
+                />
+              )}
+            </>
+          </Container>
         </form>
       </Container>
     );
