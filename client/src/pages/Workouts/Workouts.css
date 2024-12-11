@@ -1,71 +1,77 @@
 .workouts-container {
-    max-width: 1000px;
-    padding: 40px;
-    color: #fff;
-    background: rgba(10, 10, 10, 0.9);
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h3 {
-    color: #fff;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
+  max-width: 1000px;
+  padding: 40px;
+  color: #fff;
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .form-group {
-    padding: 0px;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  
-  form select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background: #333;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  form button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff7300;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  form button:hover {
-    background-color: #fc8830;
-  }
+h3 {
+  color: #fff;
+}
 
-  .training-container {
-    padding: 0px;
-  }
-  
-  .workout-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .workout-item {
-    background: #333;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .workout-item p {
-    margin: 5px 0;
-  }
-  
-  
+form {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 60px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 30px);
+  padding: 0px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #fc8830;
+}
+
+.training-container {
+  padding: 0px;
+}
+
+.workout-list {
+  list-style: none;
+  padding: 0;
+}
+
+.workout-item {
+  background: #333;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.workout-item p {
+  margin: 5px 0;
+}

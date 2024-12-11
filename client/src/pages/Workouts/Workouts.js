@@ -56,7 +56,7 @@ function Workouts() {
   };
   /*<LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateCalendar
-              onChange={(e) => setDate(`${e.$M + 1}/${e.$D}/${e.$y}`)}
+              onChange={(e) => setDate(${e.$M + 1}/${e.$D}/${e.$y})}
             />
         </LocalizationProvider>*/
 
@@ -64,56 +64,58 @@ function Workouts() {
     <Container className="workouts-container">
       <h1 className="text-light mb-4">Тренування</h1>
       <form onSubmit={handleAddWorkout}>
-        <Container className="form-group">
-          <label>Тип тренування:</label>
-          <select
-            name="type"
-            value={formData.type}
-            onChange={handleChange}
-          >
-            <option value="Біг на вулиці">Біг на вулиці</option>
-            <option value="Ходьба">Ходьба</option>
-            <option value="Біг на доріжці">Біг на доріжці</option>
-            <option value="Їзда на велосипеді">Їзда на велосипеді</option>
-          </select>
-        </Container>
+        <Container className="form-container">
+            <Container className="form-group">
+                <label>Тип тренування:</label>
+                <select
+                name="type"
+                value={formData.type}
+                onChange={handleChange}
+                >
+                <option value="Біг на вулиці">Біг на вулиці</option>
+                <option value="Ходьба">Ходьба</option>
+                <option value="Біг на доріжці">Біг на доріжці</option>
+                <option value="Їзда на велосипеді">Їзда на велосипеді</option>
+                </select>
+            </Container>
 
-        <Container className="form-group">
-          <label>Пройдена відстань (км):</label>
-          <input
-            type="number"
-            name="distance"
-            value={formData.distance}
-            onChange={handleChange}
-            required
-          />
-        </Container>
+            <Container className="form-group">
+                <label>Пройдена відстань (км):</label>
+                <input
+                type="number"
+                name="distance"
+                value={formData.distance}
+                onChange={handleChange}
+                required
+                />
+            </Container>
 
-        <Container className="form-group">
-          <label>Час тренування (хвилини):</label>
-          <input
-            type="number"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            required
-          />
-        </Container>
+            <Container className="form-group">
+                <label>Час тренування (хвилини):</label>
+                <input
+                type="number"
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+                required
+                />
+            </Container>
 
-        <Container className="form-group">
-          <label>Дата тренування:</label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
+            <Container className="form-group">
+                <label>Дата тренування:</label>
+                <input
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+                />
+            </Container>
         </Container>
 
         <button type="submit">Додати тренування</button>
       </form>
-
+      
       <Container className="training-container">
         <h3 className="text-light mb-4">Журнал тренувань</h3>
         {workouts.length === 0 ? (
