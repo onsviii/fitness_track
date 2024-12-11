@@ -40,7 +40,7 @@ const SignUp = () => {
     };
 
     return (
-      <div className="auth-container">
+      <Container>
         <h2>Реєстрація</h2>
         <form>
           <div className="form-group">
@@ -95,7 +95,7 @@ const SignUp = () => {
             Зареєструватися
           </button>
         </form>
-      </div>
+      </Container>
     );
   };
 

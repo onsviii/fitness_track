@@ -1,0 +1,64 @@
+.workouts-container {
+    max-width: 1000px;
+    padding: 40px;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #ff7300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background-color: #ff8c33;
+  }
+  
+  .workout-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-item {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .workout-item p {
+    margin: 5px 0;
+  }
+  
+  

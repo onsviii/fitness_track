@@ -1,6 +1,10 @@
 .navbar {
+    width: 100%;
+    max-width: 1000px;
+    background: #333;
     padding: 10px;
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     border-radius: 10px;
     color: #ffffff
 }

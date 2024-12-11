@@ -19,57 +19,17 @@ body {
   background-size: cover;*/
 }
 
-.gg {
-  max-width: 600px ;
-  padding: 80px;
-  background: rgba(10, 10, 10, 0.9);
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-align: center;
+.page-container {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
 }
 
-/*.page-container {
-  max-width: 600px;
-  width: fit-content;
-  padding: 40px;
-  background: rgba(10, 10, 10, 0.9);
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-align: center;
-}*/
+.auth-container {
+  margin: 50px auto;
+}
 
 .container {
-  margin: 40px auto;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-}
-
-.home-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.status-bar {
-  display: flex;
-  justify-content: space-between;
-  background: #222;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.status-item {
-  color: #fff;
-  font-size: 1.1rem;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
 }

@@ -12,6 +12,7 @@ export default function NaviBar() {
           <Navbar.Brand href="/">Fitness Tracker</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Здоров'я</Nav.Link>
+            <Nav.Link href="/workouts">Тренування</Nav.Link>
             <Nav.Link href="/profile">Профіль</Nav.Link>
           </Nav>
         </Container>

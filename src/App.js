@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer"
 import NaviBar from './components/NaviBar/NaviBar';
 
 import Home from './pages/Home/Home';
+import Workouts from './pages/Workouts/Workouts'
 import Users from './pages/Users/Users';
 import Authentication from "./pages/Authentication/Authentication";
 
@@ -20,17 +21,18 @@ function App() {
   return (
     <>
       <Router>
-        {false ? (
-          <Container>
+        {true ? (
+          <Container className="page-container">
             <NaviBar />
             <Routes>
               <Route path="/" exact Component={Home} />
+              <Route path="/workouts" exact Component={Workouts} />
               <Route path="/profile" Component={Users} />
             </Routes>
             <Footer />
           </Container>
         ) : (
-          <Container>
+          <Container className="auth-container">
             <Authentication />
           </Container>
         )}

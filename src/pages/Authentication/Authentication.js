@@ -8,7 +8,7 @@ const Authentication = () => {
   const [isSignUp, setIsSignUp] = useState(true);
 
   return (
-    <Container className="page-container">
+    <Container className="auth-group">
       {isSignUp ? <SignUp /> : <SignIn />}
       <button 
         onClick={() => setIsSignUp(!isSignUp)} 

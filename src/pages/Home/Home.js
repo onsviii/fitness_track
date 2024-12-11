@@ -1,9 +1,11 @@
 import React from "react";
-import CardItem from "../../components/CardItem/CardItem";;
+import Container from 'react-bootstrap/Container';
+import CardItem from "../../components/CardItem/CardItem";
+import "./Home.css"
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <Container className="home-container">
       <h1 className="text-light mb-4">Здоров'я</h1>
       <div className="status-bar">
         <div className="status-item">
@@ -22,6 +24,6 @@ export default function Home() {
         <CardItem title="Тиск" description="Одягніть пристрій і виміряйте" />
         <CardItem title="Кисень у крові" description="Одягніть пристрій і виміряйте" />
       </div>
-    </div>
+    </Container>
   );
 }
