@@ -12,22 +12,21 @@ import NaviBar from './components/NaviBar/NaviBar';
 
 import Home from './pages/Home/HomePage';
 import Workouts from './pages/Workouts/WorkoutsPage'
-import Users from './pages/Users/Users';
 import Authentication from "./pages/Authentication/AuthenticationPage";
 
 function App() {
-  //const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = true;
 
   return (
     <>
       <Router>
-        {true ? (
+        {currentUser ? (
           <Container className="page-container">
             <NaviBar />
             <Routes>
+              <Route path="/auth" Component={Authentication} />
               <Route path="/" exact Component={Home} />
               <Route path="/workouts" exact Component={Workouts} />
-              <Route path="/profile" Component={Users} />
             </Routes>
             <Footer />
           </Container>
