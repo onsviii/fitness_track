@@ -141,7 +141,7 @@ function Workouts() {
             </Container>
           </Container>
 
-          <button type="submit">Додати тренування</button>
+          <button className="add-btn" type="submit">Додати тренування</button>
         </form>
 
         <Container className="training-container">
@@ -169,11 +169,11 @@ function Workouts() {
         <Container className="notes-input">
           <input
             type="text"
-            placeholder="Додати нотатку..."
+            placeholder="Введіть текст..."
             value={noteInput}
             onChange={(e) => setNoteInput(e.target.value)}
           />
-          <button onClick={handleAddNote}>Додати</button>
+          <button className="add-btn" onClick={handleAddNote}>Додати</button>
         </Container>
         <Container className="notes-list">
           {notes.map((note, index) => (

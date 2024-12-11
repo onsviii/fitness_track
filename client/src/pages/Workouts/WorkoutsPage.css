@@ -36,8 +36,7 @@ form {
   text-align: left;
 }
 
-form button {
-  margin-top: 10px;
+.add-btn {
   padding: 10px 20px;
   background-color: #ff7300;
   color: #fff;
@@ -46,11 +45,11 @@ form button {
   border-radius: 5px;
 }
 
-form button:hover {
+.add-btn:hover {
   background-color: #fc8830;
 }
 
-form button:active {
+.add-btn:active {
   scale: 0.99;
 }
 
@@ -83,7 +82,6 @@ form button:active {
   padding: 15px;
   border-radius: 8px;
 }
-
 
 .notes-input {
   padding: 0px;
