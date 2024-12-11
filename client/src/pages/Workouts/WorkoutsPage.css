@@ -9,6 +9,11 @@
   padding: 20px;
 }
 
+.workouts-section {
+  padding: 0px;
+  flex: 1;
+}
+
 h3 {
   color: #fff;
 }
@@ -67,4 +72,48 @@ form button:active {
 
 .workout-item p {
   margin: 5px 0;
+}
+
+.notes-section {
+  width: 350px;
+  max-width: 350px;
+  flex: 1;
+  margin-left: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+.notes-input {
+  padding: 0px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.notes-list {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-item {
+  background: #555;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-item {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+  cursor: text;
+}
+
+.note-item[contenteditable="true"]:focus {
+  outline: none;
 }
