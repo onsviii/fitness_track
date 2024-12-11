@@ -33,3 +33,21 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
+
+label {
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}

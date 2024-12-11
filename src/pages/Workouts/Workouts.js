@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
 import "./Workouts.css";
-
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+//import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DateCalendar } from "@mui/x-date-pickers";
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
   const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ function Workouts() {
     time: "",
     date: "",
   });
+  const [date, setDate] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,12 +54,17 @@ function Workouts() {
       date: "",
     });
   };
+  /*<LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DateCalendar
+              onChange={(e) => setDate(`${e.$M + 1}/${e.$D}/${e.$y}`)}
+            />
+        </LocalizationProvider>*/
 
   return (
     <Container className="workouts-container">
-      <h2>Мої тренування</h2>
+      <h1 className="text-light mb-4">Тренування</h1>
       <form onSubmit={handleAddWorkout}>
-        <div>
+        <Container className="form-group">
           <label>Тип тренування:</label>
           <select
             name="type"
@@ -68,9 +76,9 @@ function Workouts() {
             <option value="Біг на доріжці">Біг на доріжці</option>
             <option value="Їзда на велосипеді">Їзда на велосипеді</option>
           </select>
-        </div>
+        </Container>
 
-        <div>
+        <Container className="form-group">
           <label>Пройдена відстань (км):</label>
           <input
             type="number"
@@ -79,9 +87,9 @@ function Workouts() {
             onChange={handleChange}
             required
           />
-        </div>
+        </Container>
 
-        <div>
+        <Container className="form-group">
           <label>Час тренування (хвилини):</label>
           <input
             type="number"
@@ -90,9 +98,9 @@ function Workouts() {
             onChange={handleChange}
             required
           />
-        </div>
+        </Container>
 
-        <div>
+        <Container className="form-group">
           <label>Дата тренування:</label>
           <input
             type="date"
@@ -101,13 +109,13 @@ function Workouts() {
             onChange={handleChange}
             required
           />
-        </div>
+        </Container>
 
         <button type="submit">Додати тренування</button>
       </form>
 
-      <div>
-        <h3>Список тренувань</h3>
+      <Container className="training-container">
+        <h3 className="text-light mb-4">Журнал тренувань</h3>
         {workouts.length === 0 ? (
           <p>Ще немає тренувань. Додайте перше!</p>
         ) : (
@@ -123,7 +131,7 @@ function Workouts() {
             ))}
           </ul>
         )}
-      </div>
+      </Container>
     </Container>
   );
 }

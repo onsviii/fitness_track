@@ -10,7 +10,7 @@
 
 .status-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background: #222;
     padding: 15px;
     border-radius: 8px;
@@ -18,11 +18,14 @@
 }
 
 .status-item {
+    padding: 0px;
     color: #fff;
-    font-size: 1.1rem;
+    text-align: center;
+    font-size: 18px;
 }
 
 .card-container {
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
