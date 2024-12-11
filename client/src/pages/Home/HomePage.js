@@ -1,7 +1,7 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
 import CardItem from "../../components/CardItem/CardItem";
-import "./Home.css"
+import "./HomePage.css"
 
 export default function Home() {
   return (

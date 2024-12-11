@@ -31,17 +31,6 @@ form {
   text-align: left;
 }
 
-
-form select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background: #333;
-  color: #fff;
-  font-size: 14px;
-}
-
 form button {
   margin-top: 10px;
   padding: 10px 20px;
@@ -54,6 +43,10 @@ form button {
 
 form button:hover {
   background-color: #fc8830;
+}
+
+form button:active {
+  scale: 0.99;
 }
 
 .training-container {

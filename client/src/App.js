@@ -10,10 +10,10 @@ import "./index.css"
 import Footer from "./components/Footer/Footer"
 import NaviBar from './components/NaviBar/NaviBar';
 
-import Home from './pages/Home/Home';
-import Workouts from './pages/Workouts/Workouts'
+import Home from './pages/Home/HomePage';
+import Workouts from './pages/Workouts/WorkoutsPage'
 import Users from './pages/Users/Users';
-import Authentication from "./pages/Authentication/Authentication";
+import Authentication from "./pages/Authentication/AuthenticationPage";
 
 function App() {
   //const { currentUser } = useSelector((state) => state.user);

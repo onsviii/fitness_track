@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
-import "./Workouts.css";
+import "./WorkoutsPage.css";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 //import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers";
@@ -80,7 +80,7 @@ function Workouts() {
             </Container>
 
             <Container className="form-group">
-                <label>Пройдена відстань (км):</label>
+                <label>Відстань (км):</label>
                 <input
                 type="number"
                 name="distance"
