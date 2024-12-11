@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
+import { IconButton } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 import Container from 'react-bootstrap/Container';
 import "./WorkoutsPage.css";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-//import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DateCalendar } from "@mui/x-date-pickers";
 
 function Workouts() {
-  const noteRef = useRef();
   const [workouts, setWorkouts] = useState([]);
   const [formData, setFormData] = useState({
     type: "Біг на вулиці",
@@ -16,6 +14,8 @@ function Workouts() {
   });
   const [notes, setNotes] = useState([]);
   const [noteInput, setNoteInput] = useState("");
+
+  const noteRefs = useRef([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,26 +65,21 @@ function Workouts() {
     }
   };
 
-  const handleEditNote = (index, newText) => {
-    setNotes((prevNotes) =>
-        prevNotes.map((note, i) =>
-            i === index ? { ...note, text: newText } : note
-        )
-    );
-  };
-  
-  const handleToggleEdit = (index) => {
-    const updatedNotes = notes.map((note, i) =>
-      i === index ? { ...note, isEditing: !note.isEditing } : note
-    );
-    setNotes(updatedNotes);
+  const handleSaveNote = (index) => {
+    if (noteRefs.current[index]) {
+      const newText = noteRefs.current[index].textContent;
+      const updatedNotes = notes.map((note, i) =>
+        i === index ? { ...note, text: newText, isEditing: false } : note
+      );
+      setNotes(updatedNotes);
+    }
   };
 
-  const handleSaveNote = (index, ref) => {
-    const updatedNotes = notes.map((note, i) =>
-      i === index ? { ...note, text: ref.current.textContent, isEditing: false } : note
-    );
+  const handleDeleteNote = (index) => {
+    const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
+
+    noteRefs.current.splice(index, 1);
   };
 
   return (
@@ -177,18 +172,26 @@ function Workouts() {
         </Container>
         <Container className="notes-list">
           {notes.map((note, index) => (
-            <div key={index}>
-                <div
-                  className="note-item"
-                  ref={noteRef}
-                  contentEditable
-                  suppressContentEditableWarning
-                  onBlur={() => handleSaveNote(index, noteRef)}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {note.text}
-                </div>
-            </div>
+            <Container key={index} className="note-item">
+              <Container
+                className="note-textarea"
+                ref={(el) => (noteRefs.current[index] = el)}
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={() => handleSaveNote(index)}
+              >
+                {note.text}
+              </Container>
+              <IconButton
+                className="delete-btn"
+                onClick={() => handleDeleteNote(index)}
+                size="small"
+                color="white"
+                disableRipple
+              >
+                <DeleteIcon fontSize="small" />
+              </IconButton>
+            </Container>
           ))}
         </Container>
       </Container>

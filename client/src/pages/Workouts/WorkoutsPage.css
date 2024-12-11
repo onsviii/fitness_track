@@ -98,20 +98,27 @@ form {
 }
 
 .note-item {
-  background: #555;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
   padding: 10px;
+  background: #555;
+  color: white;
   border-radius: 5px;
-  cursor: pointer;
+  overflow: hidden;
+  min-height: 40px;
 }
 
-.note-item {
+.note-textarea {
+  flex: 1;
+  min-width: 90%;
   padding: 5px;
-  border-radius: 5px;
-  background-color: #555;
   color: #fff;
   cursor: text;
 }
 
-.note-item[contenteditable="true"]:focus {
-  outline: none;
+.delete-btn {
+  flex: 1;
+  color: white;
 }
