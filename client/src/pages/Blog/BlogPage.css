@@ -1,0 +1,16 @@
+.blog-container {
+    max-width: 1000px;
+    padding: 40px;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-container {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

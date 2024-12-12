@@ -12,6 +12,7 @@ import NaviBar from './components/NaviBar/NaviBar';
 
 import Home from './pages/Home/HomePage';
 import Workouts from './pages/Workouts/WorkoutsPage'
+import Blog from './pages/Blog/BlogPage'
 import Authentication from "./pages/Authentication/AuthenticationPage";
 
 function App() {
@@ -20,13 +21,14 @@ function App() {
   return (
     <>
       <Router>
-        {currentUser ? (
+        {true ? (
           <Container className="page-container">
             <NaviBar />
             <Routes>
               <Route path="/auth" Component={Authentication} />
               <Route path="/" exact Component={Home} />
               <Route path="/workouts" exact Component={Workouts} />
+              <Route path="/blog" exact Component={Blog} />
             </Routes>
             <Footer />
           </Container>

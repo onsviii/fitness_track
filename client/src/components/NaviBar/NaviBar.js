@@ -13,6 +13,7 @@ export default function NaviBar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Здоров'я</Nav.Link>
             <Nav.Link href="/workouts">Тренування</Nav.Link>
+            <Nav.Link href="/blog">Блог</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/auth">Вийти з акаунту</Nav.Link>
