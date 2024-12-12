@@ -36,7 +36,6 @@ const SignUp = () => {
             password
           );
     
-          // Оновлення профілю з іменем
           await updateProfile(userCredential.user, {
             displayName: name,
           });
@@ -48,6 +47,9 @@ const SignUp = () => {
           setLoading(false);
           setButtonDisabled(false);
         }
+
+        setLoading(false);
+        setButtonDisabled(false);
       }
     };
 

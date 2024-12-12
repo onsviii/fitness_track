@@ -38,6 +38,9 @@ const SignIn = () => {
         setButtonDisabled(false);
       }
     }
+  
+    setLoading(false);
+    setButtonDisabled(false);
   };
 
   return (

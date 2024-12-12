@@ -24,3 +24,9 @@
 .nav-link:hover {
     background: #333;
 }
+
+.exit-btn {
+    color: #fff;
+    background: none;
+    border: none;
+}

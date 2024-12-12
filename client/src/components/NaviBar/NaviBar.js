@@ -28,7 +28,7 @@ export default function NaviBar() {
             <Nav.Link href="/blog">Блог</Nav.Link>
           </Nav>
           <Nav>
-            <button onClick={handleLogout}>Вийти</button>
+            <button className="exit-btn" onClick={handleLogout}>Вийти</button>
           </Nav>
         </Container>
       </Navbar>
