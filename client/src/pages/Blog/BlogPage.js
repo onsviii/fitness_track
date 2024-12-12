@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import CardItem from "../../components/CardItem/CardItem";
 import "./BlogPage.css"
 
-export default function Blog() {
+const Blog = () => {
   return (
     <Container className="blog-container">
       <h1 className="text-light mb-4">Блог</h1>
@@ -40,3 +40,5 @@ export default function Blog() {
     </Container>
   );
 }
+
+export default Blog;

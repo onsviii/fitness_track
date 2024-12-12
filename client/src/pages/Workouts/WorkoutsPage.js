@@ -4,7 +4,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Container from 'react-bootstrap/Container';
 import "./WorkoutsPage.css";
 
-function Workouts() {
+const Workouts = () => {
   const [workouts, setWorkouts] = useState([]);
   const [formData, setFormData] = useState({
     type: "Біг на вулиці",

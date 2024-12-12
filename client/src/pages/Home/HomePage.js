@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import CardItem from "../../components/CardItem/CardItem";
 import "./HomePage.css"
 
-export default function Home() {
+const Home = () => {
   return (
     <Container className="home-container">
       <h1 className="text-light mb-4">Здоров'я</h1>
@@ -27,3 +27,5 @@ export default function Home() {
     </Container>
   );
 }
+
+export default Home;
