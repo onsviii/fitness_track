@@ -4,8 +4,10 @@ import {Visibility, VisibilityOff } from "@mui/icons-material";
 import { CircularProgress } from '@mui/material';
 import './Authentication.css'
 
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
+
 const SignUp = () => {
-    //const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(false);
     const [name, setName] = useState("");
@@ -21,22 +23,31 @@ const SignUp = () => {
       return true;
     };
   
-    const handelSignUp = async () => {
+    const handelSignUp = async (e) => {
+      e.preventDefault();
       setLoading(true);
       setButtonDisabled(true);
+    
       if (validateInputs()) {
-        /*await UserSignUp({ name, email, password })
-          .then((res) => {
-            dispatch(loginSuccess(res.data));
-            alert("Account Created Success");
-            setLoading(false);
-            setButtonDisabled(false);
-          })
-          .catch((err) => {
-            alert(err.response.data.message);
-            setLoading(false);
-            setButtonDisabled(false);
-          });*/
+        try {
+          const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+    
+          // Оновлення профілю з іменем
+          await updateProfile(userCredential.user, {
+            displayName: name,
+          });
+    
+          alert("Реєстрація успішна!");
+        } catch (error) {
+          alert("Помилка реєстрації: " + error.message);
+        } finally {
+          setLoading(false);
+          setButtonDisabled(false);
+        }
       }
     };
 

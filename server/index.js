@@ -14,16 +14,6 @@ app.use(bodyParser.json());
 
 app.use('/api', firebaseRoutes);
 
-/*app.post('/signup', async (req, res) => {
-    const userResponse = await admin.auth().createUser({
-        email: req.body.email,
-        password: req.body.password,
-        emailVerified: false,
-        disabled: false
-    })
-    res.json(userResponse);
-})*/
-
 app.get('/users', async (req, res) => {
   try {
     const usersSnapshot = await admin.firestore().collection('users').get();

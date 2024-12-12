@@ -15,17 +15,27 @@ import Workouts from './pages/Workouts/WorkoutsPage'
 import Blog from './pages/Blog/BlogPage'
 import Authentication from "./pages/Authentication/AuthenticationPage";
 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebaseConfig";
+import { useEffect, useState } from "react";
+
 function App() {
-  const { currentUser } = true;
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+    return () => unsubscribe();
+  }, []);
 
   return (
     <>
       <Router>
-        {true ? (
+        {currentUser ? (
           <Container className="page-container">
             <NaviBar />
             <Routes>
-              <Route path="/auth" Component={Authentication} />
               <Route path="/" exact Component={Home} />
               <Route path="/workouts" exact Component={Workouts} />
               <Route path="/blog" exact Component={Blog} />

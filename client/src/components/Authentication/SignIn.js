@@ -4,6 +4,9 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { CircularProgress } from '@mui/material';
 import "./Authentication.css";
 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
+
 const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -19,11 +22,21 @@ const SignIn = () => {
     return true;
   };
 
-  const handleSignIn = async () => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
     setLoading(true);
     setButtonDisabled(true);
+  
     if (validateInputs()) {
-      // Ваш код авторизації
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        alert("Успішний вхід!");
+      } catch (error) {
+        alert("Помилка входу: " + error.message);
+      } finally {
+        setLoading(false);
+        setButtonDisabled(false);
+      }
     }
   };
 

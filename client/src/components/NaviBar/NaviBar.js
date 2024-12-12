@@ -4,7 +4,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NaviBar.css"
 
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
+
 export default function NaviBar() {
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      alert("Ви вийшли з акаунту!");
+    } catch (error) {
+      alert("Помилка виходу: " + error.message);
+    }
+  };
+  
   return (
     <>
       <Navbar>
@@ -16,7 +28,7 @@ export default function NaviBar() {
             <Nav.Link href="/blog">Блог</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/auth">Вийти з акаунту</Nav.Link>
+            <button onClick={handleLogout}>Вийти</button>
           </Nav>
         </Container>
       </Navbar>
